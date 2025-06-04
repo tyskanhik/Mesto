@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+// @use "sass:color";
+@use 'styles/variables';
+@use "sass:color";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: variables.$font-family;
+    font-size: variables.$font-size-base;
+    background-color: variables.$color-background;
+    color: variables.$color-on-background;
+    line-height: 1.5;
+}
+
+a {
+    color: variables.$color-primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+button {
+    background: variables.$color-primary;
+    color: variables.$color-on-surface;
+    border: none;
+    padding: variables.$spacing-sm variables.$spacing-md;
+    border-radius: variables.$border-radius;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+        background: color.adjust(variables.$color-primary, $lightness: 10%);
+    }
+}
