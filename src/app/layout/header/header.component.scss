@@ -1,0 +1,31 @@
+@use '../../../styles/variables';
+
+header {
+    margin: 0 auto;
+    max-width: 882px;
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    min-height: 120px;
+    position: relative;
+
+
+    img {
+        height: 33px;
+        -o-object-fit: contain;
+        object-fit: contain;
+        width: 142px;
+    }
+}
+
+header:before {
+    background: variables.$color-secondary;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    opacity: .7;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+}
