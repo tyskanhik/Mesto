@@ -25,7 +25,8 @@ a {
 
 button {
     background: variables.$color-primary;
-    color: variables.$color-on-surface;
+    color: variables.$color-text-button;
+    font-size: 16px;
     border: none;
     padding: variables.$spacing-sm variables.$spacing-md;
     border-radius: variables.$border-radius;
